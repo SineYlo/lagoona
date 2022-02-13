@@ -1,7 +1,7 @@
 {
-  "name": "project-name",
+  "name": "lagoona",
   "version": "1.0.0",
-  "description": "Some description of the project.",
+  "description": "У нас вы можете заказать тур в жаркие страны, а также забронировать номер в одном из наших отелей",
   "main": "gulpfile.babel.js",
   "scripts": {
     "prepare": "husky install",
@@ -23,21 +23,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SineYlo/Starter-Template.git"
+    "url": "git+https://github.com/SineYlo/lagoona.git"
   },
   "keywords": [
-    "keyword-1",
-    "keyword-2",
-    "keyword-3",
-    "keyword-4",
-    "keyword-5"
+    "сеть отелей",
+    "горящие туры",
+    "бронь",
+    "комплекс услуг",
+    "турфирма"
   ],
   "author": "SineYlo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SineYlo/Starter-Template/issues"
+    "url": "https://github.com/SineYlo/lagoona/issues"
   },
-  "homepage": "https://github.com/SineYlo/Starter-Template#readme",
+  "homepage": "https://github.com/SineYlo/lagoona#readme",
   "devDependencies": {
     "@babel/core": "^7.17.2",
     "@babel/eslint-parser": "^7.17.0",
@@ -88,5 +88,9 @@
     "stylelint-scss": "^4.1.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "focus-visible": "^5.2.0",
+    "mailgo": "^0.12.2"
   }
 }

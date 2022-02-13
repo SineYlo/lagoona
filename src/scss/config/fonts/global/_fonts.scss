@@ -1,2 +1,4 @@
 // |=============== CONNECTING FONTS ===============>
-// @include addFont($nameFontFamily, $pathToWoff2, $pathToWoff, $fw, $fs);
+@include addFont(Muller, muller/muller-regular, muller/muller-regular, 400, normal);
+@include addFont(Muller, muller/muller-medium, muller/muller-medium, 500, normal);
+@include addFont(Muller, muller/muller-bold, muller/muller-bold, 700, normal);
