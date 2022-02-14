@@ -1,0 +1,74 @@
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg) scale(0.6);
+    transform: rotate(180deg) scale(0.6);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.ball-clip-rotate-multiple {
+  position: relative;
+}
+
+.ball-clip-rotate-multiple > div {
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: rotate 1s 0s ease-in-out infinite;
+  animation: rotate 1s 0s ease-in-out infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.ball-clip-rotate-multiple > div:last-child {
+  left: -10px;
+  top: -10px;
+  display: inline-block;
+  border-color: #fff transparent;
+  width: 15px;
+  height: 15px;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.loader {
+  &__box {
+    .ball-clip-rotate-multiple &:last-child {
+      border-color: $black-color transparent;
+    }
+
+    .ball-clip-rotate-multiple > & {
+      border-top-color: $black-color;
+      border-bottom-color: $black-color;
+    }
+  }
+
+  .loader-hidden & {
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: $medium-transition-duration;
+    transition-timing-function: ease-in-out;
+  }
+
+  .loaded & {
+    display: none;
+  }
+}

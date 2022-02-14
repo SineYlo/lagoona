@@ -1,0 +1,104 @@
+.section-contacts {
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 23px;
+  }
+}
+
+.box-contacts {
+  @include f-ai-center;
+
+  border-radius: $second-br;
+  padding: 46px;
+  background-color: $white-color;
+
+  &__inner {
+    margin-right: 50px;
+    width: min(100%, 375px);
+  }
+
+  &__content:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+
+  &__content:last-of-type {
+    margin-bottom: 45px;
+  }
+
+  &__plot-course {
+    padding: 26px 28px;
+    min-width: 213px;
+    font-weight: $second-font-weight;
+  }
+
+  &__picture {
+    border-radius: $primary-br;
+    width: min(100%, 653px);
+    min-height: 528px;
+    background: url("../img/pictures/fr-reception-bg.png") center / cover no-repeat;
+  }
+}
+
+.content-contacts {
+  @include f-jc-sb;
+
+  border-bottom: 1px solid $ninth-color;
+  padding-bottom: 23px;
+
+  &__title {
+    font-weight: $second-font-weight;
+    font-size: $text-size-medium;
+    line-height: $primary-lh;
+  }
+
+  &__address {
+    max-width: 229px;
+    line-height: $second-lh;
+  }
+
+  &__box-phones,
+  &__box-mails {
+    @include flex;
+
+    flex-direction: column;
+    width: min(100%, 229px);
+  }
+
+  &__link {
+    @include outlineFocus(2px);
+
+    position: relative;
+    width: max-content;
+    line-height: $second-lh;
+    color: $primary-color;
+    transition: color $medium-transition-duration ease-in-out;
+
+    .no-touch &:hover {
+      color: $second-color-effects;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active,
+    .touch &:active {
+      color: $primary-color-effects;
+    }
+
+    &.focus-visible::before {
+      outline-color: $primary-color;
+    }
+  }
+
+  &__desc {
+    line-height: $second-lh;
+    color: $tenth-color;
+  }
+
+  &__schedule {
+    max-width: 229px;
+    line-height: $second-lh;
+  }
+}

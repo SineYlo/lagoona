@@ -1,0 +1,14 @@
+.section-about {
+  &_indent {
+    margin-bottom: 68px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__desc {
+    max-width: 888px;
+    line-height: $third-lh;
+  }
+}

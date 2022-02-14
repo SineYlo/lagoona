@@ -1,54 +1,44 @@
 <section class="section-tour section-tour_indent" id="section-tour">
   <div class="container section-tour__container">
-    <h2 class="title section-tour__title">
-      Хочу тур
-    </h2>
-    <form class="form-tour section-tour__form" action="https://postman-echo.com/post" name="formTour" method="post">
-      <div class="form-tour__wrapper form-tour__wrapper_city">
-        <label class="form-tour__label" for="select-city">
-          Город вылета
-        </label>
-        <select class="form-tour__select-city" id="select-city" name="formTourSelectCity">
-          <option value="spb">Санкт-Петербург</option>
-          <option value="hbk">Хабаровск</option>
-          <option value="msc">Москва</option>
-          <option value="krd">Краснодар</option>
-          <option value="vdk">Владивосток</option>
-        </select>
-      </div>
-      <div class="form-tour__wrapper form-tour__wrapper_country">
-        <label class="form-tour__label" for="select-country">
-          Страна
-        </label>
-        <select class="form-tour__select-country" id="select-country" name="formTourSelectCountry">
-          <option value="russia">Россия</option>
-          <option value="turkey">Турция</option>
-          <option value="switzerland">Швейцария</option>
-          <option value="italy">Италия</option>
-          <option value="germany">Германия</option>
-        </select>
-      </div>
-      <div class="form-tour__wrapper form-tour__wrapper_date">
-        <label class="form-tour__label" for="field-date">
-          Дата прибытия
-        </label>
-        <input class="form-tour__field form-tour__field_date" id="field-date" type="date" name="formTourFieldDate">
-      </div>
-      <div class="form-tour__wrapper form-tour__wrapper_nights">
-        <label class="form-tour__label" for="field-nights">
-          Ночей
-        </label>
-        <input class="form-tour__field form-tour__field_nights" id="field-nights" type="number" name="formTourFieldNights" min="1">
-      </div>
-      <div class="form-tour__wrapper form-tour__wrapper_tourists">
-        <label class="form-tour__label" for="field-tourists">
-          Туристы
-        </label>
-        <input class="form-tour__field form-tour__field_tourists" id="field-tourists" type="number" name="formTourFieldTourists" min="1">
-      </div>
-      <button class="btn form-tour__find">
-        Найти
-      </button>
-    </form>
+    <div class="section-tour__inner">
+      <h2 class="title section-tour__title">
+        Хочу тур
+      </h2>
+      <form class="form-tour section-tour__form" action="https://postman-echo.com/post" name="formTour" method="post">
+        <div class="form-tour__wrapper form-tour__wrapper_city">
+          <label class="form-tour__label" for="field-city">
+            Город вылета
+          </label>
+          <input class="form-tour__field form-tour__field_city" id="field-city" type="text" name="formTourFieldCity" translate="yes" autocapitalize="off" autocorrect="false" autocomplete="on" spellcheck="false" required>
+        </div>
+        <div class="form-tour__wrapper form-tour__wrapper_country">
+          <label class="form-tour__label" for="field-country">
+            Страна
+          </label>
+          <input class="form-tour__field form-tour__field_country" id="field-country" type="text" name="formTourFieldCountry" translate="yes" autocapitalize="off" autocorrect="false" autocomplete="on" spellcheck="false" required>
+        </div>
+        <div class="form-tour__wrapper form-tour__wrapper_date">
+          <label class="form-tour__label" for="field-date">
+            Дата прибытия
+          </label>
+          <input class="form-tour__field form-tour__field_date" id="field-date" type="date" name="formTourFieldDate" required>
+        </div>
+        <div class="form-tour__wrapper form-tour__wrapper_nights">
+          <label class="form-tour__label" for="field-nights">
+            Ночей
+          </label>
+          <input class="form-tour__field form-tour__field_nights" id="field-nights" type="number" name="formTourFieldNights" min="1" required>
+        </div>
+        <div class="form-tour__wrapper form-tour__wrapper_tourists">
+          <label class="form-tour__label" for="field-tourists">
+            Туристы
+          </label>
+          <input class="form-tour__field form-tour__field_tourists" id="field-tourists" type="number" name="formTourFieldTourists" min="1" required>
+        </div>
+        <button class="btn form-tour__find">
+          Найти
+        </button>
+      </form>
+    </div>
   </div>
 </section>

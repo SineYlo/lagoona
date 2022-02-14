@@ -2,6 +2,8 @@
 // |=============== CONNECTING EXTERNAL MODULES ===============>
 import focusVisible from 'focus-visible';
 
+// |=============== SCRIPT CONNECTION | HOVER  ===============>
+import hover from './components/home/hover';
 // |=============== SCRIPT CONNECTION | LOADER  ===============>
 import loader from './components/home/loader';
 // |=============== SCRIPT CONNECTION | MAILGO ===============>

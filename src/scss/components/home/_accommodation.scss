@@ -1,0 +1,132 @@
+.section-accommodation {
+  &_indent {
+    margin-bottom: 67px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+  }
+}
+
+.list-accommodation {
+  @include grid;
+
+  grid-auto-rows: minmax(440px, auto);
+  grid-template: repeat(3, minmax(440px, auto)) / repeat(3, minmax(auto, 374px));
+  gap: $third-gap;
+
+  &__item {
+    border-radius: $second-br;
+
+    &_all {
+      @include flex;
+
+      position: relative;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 0 28px 55px;
+      background: linear-gradient(0deg, $third-color -2.9%, $fourth-color 65.7%), url("../img/pictures/fr-rocks-bg.png") center / cover no-repeat;
+    }
+  }
+
+  &__content {
+    border-radius: $second-br;
+    min-height: 100%;
+    background-color: $white-color;
+  }
+
+  &__box {
+    padding: 36px 46px 40px 45px;
+  }
+
+  &__inner {
+    @include f-center-sb;
+
+    margin-bottom: 15px;
+  }
+
+  &__star-box {
+    @include f-center-sb;
+
+    width: min(100%, 94px);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    line-height: $primary-lh;
+  }
+
+  &__location {
+    display: block;
+    margin-bottom: 21px;
+    line-height: $primary-lh;
+    color: $tenth-color;
+  }
+
+  &__rooms {
+    padding: 12px 19px;
+    min-width: 100px;
+  }
+
+  &__watch {
+    font-size: $text-size-medium;
+    line-height: $third-lh;
+    color: $white-color;
+    transition: opacity $medium-transition-duration ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 52px;
+      bottom: 38px;
+      display: inline-block;
+      width: 11px;
+      height: 18px;
+      background: url("../img/sprites/sprite.svg#icon-right-arrow-accommodation") 0 0 / 11px 18px no-repeat;
+      transition: transform $medium-transition-duration ease-in-out;
+    }
+
+    .no-touch &:hover,
+    &.focus-visible {
+      opacity: 0.6;
+    }
+
+    .no-touch &:hover::after,
+    &.focus-visible::after {
+      transform: translateX(11px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active,
+    .touch &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.price-accommodation {
+  display: inline-block;
+  line-height: $primary-lh;
+
+  &__prefix {
+    color: $tenth-color;
+  }
+
+  &__amount {
+    font-weight: $second-font-weight;
+    font-size: $text-size-medium;
+    line-height: $primary-lh;
+  }
+}

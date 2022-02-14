@@ -1,0 +1,114 @@
+.section-offers {
+  &_indent {
+    margin-bottom: 67px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+  }
+}
+
+.list-offers {
+  @include grid;
+
+  grid-auto-rows: minmax(258px, auto);
+  grid-template: repeat(2, minmax(258px, auto)) / repeat(2, minmax(auto, 573px));
+  gap: $third-gap;
+
+  &__item {
+    &_luxury {
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+    }
+  }
+
+  &__link {
+    @include outlineFocus(7px);
+
+    position: relative;
+    display: block;
+    height: 100%;
+
+    .no-touch &:hover .list-offers__more::before {
+      transform: translateX(11px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active .list-offers__more,
+    .touch &:active .list-offers__more {
+      color: $white-color;
+    }
+
+    &.focus-visible::before {
+      outline-color: $primary-color;
+    }
+  }
+
+  &__content {
+    border-radius: $second-br;
+    padding: 38px 40px 39px;
+    min-height: 100%;
+
+    &_maldives {
+      background: linear-gradient(90deg, $third-color -2.9%, $fourth-color 65.7%), url("../img/pictures/fr-maldives-bg.png") center / cover no-repeat;
+    }
+
+    &_luxury {
+      padding-top: 209px;
+      background: linear-gradient(0deg, $third-color -2.9%, $fourth-color 65.7%), url("../img/pictures/fr-luxury-bg.png") center / cover no-repeat;
+    }
+
+    &_krit {
+      background: linear-gradient(90deg, $third-color -2.9%, $fourth-color 65.7%), url("../img/pictures/fr-krit-bg.png") center / cover no-repeat;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    max-width: 299px;
+    font-weight: $second-font-weight;
+    font-size: $text-size-large;
+    line-height: $primary-lh;
+    color: $white-color;
+
+    &_big {
+      font-size: $text-size-huge;
+    }
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 47px;
+    font-size: $text-size-medium;
+    line-height: $primary-lh;
+    color: $white-color;
+    opacity: 0.8;
+
+    &_big {
+      font-size: $text-size-big;
+    }
+  }
+
+  &__more {
+    position: relative;
+    display: inline-block;
+    line-height: $primary-lh;
+    color: $second-color;
+    transition: color $medium-transition-duration ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -17px;
+      top: 0;
+      display: inline-block;
+      width: 11px;
+      height: 18px;
+      background: url("../img/sprites/sprite.svg#icon-right-arrow-offers") 0 0 / 11px 18px no-repeat;
+      transition: transform $medium-transition-duration ease-in-out;
+    }
+  }
+}

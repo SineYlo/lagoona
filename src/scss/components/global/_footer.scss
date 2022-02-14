@@ -1,0 +1,136 @@
+.site-footer {
+  &__inner {
+    @include flex;
+
+    border-radius: $second-br;
+    padding: 44px 52px 46px;
+    background: $twelfth-color url("../img/sprites/sprite.svg#fv-sun-bg") right 178px bottom / 254px 228px no-repeat;
+  }
+
+  &__left {
+    margin-right: 9.56848%;
+  }
+
+  &__middle {
+    margin-right: auto;
+  }
+}
+
+.left-footer {
+  width: min(100%, 320px);
+
+  &__copy,
+  &__text {
+    line-height: 30px;
+    color: $white-color;
+  }
+
+  &__copy {
+    margin-bottom: 37px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__user-agreement {
+    @include outlineFocus(4px);
+
+    position: relative;
+    display: inline-block;
+    line-height: $second-lh;
+    color: $primary-color;
+    transition: color $medium-transition-duration ease-in-out;
+
+    .no-touch &:hover {
+      color: $second-color-effects;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active,
+    .touch &:active {
+      color: $primary-color-effects;
+    }
+
+    &.focus-visible::before {
+      outline-color: $primary-color;
+    }
+  }
+}
+
+.middle-footer {
+  @include flex;
+
+  flex-direction: column;
+  transform: translateY(7px);
+
+  &__address {
+    margin-bottom: 14px;
+    line-height: $primary-lh;
+    color: $white-color;
+  }
+
+  &__link {
+    @include outlineFocus(2px);
+
+    position: relative;
+    width: max-content;
+    line-height: $second-lh;
+    color: $primary-color;
+    transition: color $medium-transition-duration ease-in-out;
+
+    &_indent {
+      margin-bottom: 15px;
+    }
+
+    .no-touch &:hover {
+      color: $second-color-effects;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active,
+    .touch &:active {
+      color: $primary-color-effects;
+    }
+
+    &.focus-visible::before {
+      outline-color: $primary-color;
+    }
+  }
+}
+
+.socials-footer {
+  @include flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  height: 205px;
+  transform: translateY(7px);
+
+  &__link {
+    .no-touch &:hover .socials-footer__icon,
+    &.focus-visible .socials-footer__icon {
+      fill: $primary-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active .socials-footer__icon,
+    .touch &:active .socials-footer__icon {
+      fill: $primary-color-effects;
+    }
+  }
+
+  &__icon {
+    fill: $tenth-color;
+    transition: fill $medium-transition-duration ease-in-out;
+  }
+}

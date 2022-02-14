@@ -1,0 +1,88 @@
+.section-services {
+  &_indent {
+    margin-bottom: 67px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+  }
+}
+
+.list-services {
+  @include grid;
+
+  grid-auto-rows: minmax(330px, auto);
+  grid-template: repeat(2, minmax(330px, auto)) / repeat(2, minmax(auto, 573px));
+  gap: $third-gap;
+
+  &__link {
+    @include outlineFocus(7px);
+
+    position: relative;
+    display: block;
+    height: 100%;
+
+    .no-touch &:hover .list-services__title {
+      color: $second-color-effects;
+    }
+
+    .no-touch &:hover .list-services__icon {
+      transform: translate(12px, -9px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active .list-services__title,
+    .touch &:active .list-services__title {
+      color: $primary-color-effects;
+    }
+
+    &.focus-visible::before {
+      outline-color: $primary-color;
+    }
+  }
+
+  &__content {
+    border-radius: $second-br;
+    padding: 189px 126px 37px 45px;
+    min-height: 100%;
+
+    &_champagne {
+      background: $white-color url("../img/pictures/fr-champagne-bg.png") 0 0 no-repeat;
+    }
+
+    &_table {
+      background: $white-color url("../img/pictures/fr-table-bg.png") 0 0 no-repeat;
+    }
+
+    &_pool {
+      background: $white-color url("../img/pictures/fr-pool-bg.png") 0 0 no-repeat;
+    }
+
+    &_parking {
+      background: $white-color url("../img/pictures/fr-parking-bg.png") 0 0 no-repeat;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: $text-size-medium;
+    line-height: $third-lh;
+    color: $primary-color;
+    transition: color $medium-transition-duration ease-in-out;
+  }
+
+  &__icon {
+    stroke: currentColor;
+    transform: translate(4px, -9px);
+    transition-property: stroke, transform;
+    transition-duration: $medium-transition-duration;
+    transition-timing-function: ease-in-out;
+  }
+
+  &__desc {
+    line-height: $third-lh;
+  }
+}

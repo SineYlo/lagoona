@@ -1,0 +1,58 @@
+.section-advantages {
+  &_indent {
+    margin-bottom: 67px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+  }
+}
+
+.list-advantages {
+  @include grid;
+
+  grid-auto-rows: minmax(275px, auto);
+  grid-template: repeat(2, minmax(275px, auto)) / repeat(4, minmax(auto, 276px));
+  gap: $primary-gap;
+
+  &__item {
+    border-radius: $second-br;
+    padding: 116px 42px 31px 45px;
+
+    &_bathtub {
+      background: $white-color url("../img/sprites/sprite.svg#fv-bathtub-bg") 45px 40px / 64px 66px no-repeat;
+    }
+
+    &_hanger {
+      background: $white-color url("../img/sprites/sprite.svg#fv-hanger-bg") 45px 40px / 67px 66px no-repeat;
+    }
+
+    &_heating {
+      background: $white-color url("../img/sprites/sprite.svg#fv-heating-bg") 45px 40px / 64px 66px no-repeat;
+    }
+
+    &_hotel-key {
+      background: $white-color url("../img/sprites/sprite.svg#fv-hotel-key-bg") 45px 40px / 66px 66px no-repeat;
+    }
+
+    &_parking {
+      background: $white-color url("../img/sprites/sprite.svg#fv-parking-bg") 45px 40px / 64px 66px no-repeat;
+    }
+
+    &_reception {
+      background: $white-color url("../img/sprites/sprite.svg#fv-reception-bg") 45px 40px / 64px 66px no-repeat;
+    }
+
+    &_security-box {
+      background: $white-color url("../img/sprites/sprite.svg#fv-security-box-bg") 45px 40px / 67px 66px no-repeat;
+    }
+
+    &_swimming-pool {
+      background: $white-color url("../img/sprites/sprite.svg#fv-swimming-pool-bg") 45px 40px / 64px 66px no-repeat;
+    }
+  }
+
+  &__desc {
+    line-height: $third-lh;
+  }
+}

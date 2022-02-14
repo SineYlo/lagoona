@@ -1,0 +1,174 @@
+.site-header {
+  &_indent {
+    margin-bottom: 67px;
+  }
+
+  &__title {
+    @include visuallyHidden;
+  }
+
+  &__top {
+    margin-bottom: 30px;
+  }
+}
+
+.top-header {
+  @include f-ai-center;
+
+  &__logo {
+    margin-right: 40px;
+  }
+
+  &__phone {
+    @include outlineFocus(4px);
+
+    position: relative;
+    margin-right: auto;
+    font-weight: $primary-font-weight;
+    font-size: $text-size-medium;
+    line-height: $primary-lh;
+    color: $eleventh-color;
+    transition: color $medium-transition-duration ease-in-out;
+
+    .no-touch &:hover,
+    &.focus-visible {
+      color: $primary-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active,
+    .touch &:active {
+      color: $primary-color-effects;
+    }
+
+    &.focus-visible::before {
+      outline-color: $primary-color;
+    }
+  }
+
+  &__account {
+    position: relative;
+  }
+}
+
+.account-header {
+  @include outlineFocus(4px);
+  @include f-ai-center;
+
+  line-height: $primary-lh;
+  color: $primary-color;
+  transition: color $medium-transition-duration ease-in-out;
+
+  &__icon {
+    margin-right: 5px;
+    fill: $primary-color;
+    transition: fill $medium-transition-duration ease-in-out;
+  }
+
+  .no-touch &:hover {
+    color: $second-color-effects;
+  }
+
+  .no-touch &:hover .account-header__icon {
+    fill: currentColor;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .no-touch &:active,
+  .touch &:active {
+    color: $primary-color-effects;
+  }
+
+  .no-touch &:active .account-header__icon,
+  .touch &:active .account-header__icon {
+    fill: currentColor;
+  }
+
+  &.focus-visible::before {
+    outline-color: $primary-color;
+  }
+}
+
+.bottom-header {
+  @include f-center-sb;
+
+  border-radius: $second-br;
+  padding: 14px 45px;
+  background-color: $white-color;
+
+  &__nav {
+    position: relative;
+  }
+}
+
+.nav-header {
+  width: 59.44444%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -58px;
+    top: -16px;
+    display: inline-block;
+    width: 1px;
+    height: 50px;
+    background-color: $seventh-color;
+  }
+
+  &__list {
+    @include f-center-sb;
+  }
+
+  &__link {
+    @include outlineFocus(4px);
+
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    color: $eleventh-color;
+    transition: color $medium-transition-duration ease-in-out;
+
+    .no-touch &:hover,
+    &.focus-visible {
+      color: $primary-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .no-touch &:active,
+    .touch &:active {
+      color: $primary-color-effects;
+    }
+
+    &.focus-visible::before {
+      outline-color: $primary-color;
+    }
+  }
+}
+
+.actions-header {
+  @include f-center-sb;
+
+  width: 30%;
+
+  &__want-tour,
+  &__callback {
+    padding: 12px 19px;
+  }
+
+  &__want-tour {
+    min-width: 107px;
+  }
+
+  &__callback {
+    min-width: 177px;
+  }
+}
